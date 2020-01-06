@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>订单确认</title>
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="icon" type="image/png" href="../../../assets/i/favicon.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="apple-touch-icon-precomposed"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="../../../assets/i/app-icon72x72@2x.png">
+<meta name="msapplication-TileColor" content="#0e90d2">
+
+<link rel="stylesheet" href="../../../assets/css/orderConfirm.css">
+ <script src="../../../assets/js/jquery.min.js"></script>
+
+ <script>
+        function clearPrice() {
+            $('#priceAll').html('');
+            $('#priceAllDiv').hide();
+            $('#zhekou').html('');
+            $('#zhekouDiv').hide();
+            $('#priceNow').html('');
+        }
+        function changeNum() {
+            var rent_id=$('#rent_id').val();
+            var begin_date=$('#begin_date').val();
+            var end_date=$('#end_date').val();
+            var num=$('#num').val();
+            if(!rent_id||!begin_date||!end_date)return false;
+            $('#rentLoadingToast').show();
+            $.get('/RentCore/cost',{rent_id:rent_id,begin_date:begin_date,end_date:end_date,num:num},function(data){
+                $('#rentLoadingToast').hide();
+                console.log(data)
+                if(data.status==1){
+                    if(data.data.priceNow<data.data.priceAll) {
+                        $('#priceAll').html(data.data.priceAll);
+                        $('#priceAllDiv').show();
+                        $('#zhekou').html(data.data.discount);
+                        $('#zhekouDiv').show();
+                    }
+                    else{
+                        $('#priceAll').html('');
+                        $('#priceAllDiv').hide();
+                        $('#zhekou').html('');
+                        $('#zhekouDiv').hide();
+                    }
+                    $('#priceNow').html(data.data.priceNow)
+                }
+                else{
+                    clearPrice();
+                    alert(data.msg);
+
+                }
+            })
+        }
+        function save() {
+           /*  $('#rentLoadingToast').show();
+            $.post("/wechat/hotel/orderDetail",$('#popform').serialize(),function (data) {
+                $('#rentLoadingToast').hide();
+                if(data.status>0)location.href='/Rent/orderDetail/'+data.order_id+'.html';
+                else alert(data.msg);
+            }) */
+            
+            location.href='/wechat/hotel/orderDetail';
+        }
+    </script>
+</head>
+<body>
+	
+	<div class="html">
+    <div class="formHead">
+        <a href="/Rent/detail/1001.html" class="title">短租订单填写</a>
+    </div>
+    <div class="formHeadBot"></div>
+    <div class="orderDiv">
+        <form id="popform">
+            <input type="hidden" name="data[rent_id]" id="rent_id" value="1001">
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p style="margin-bottom: 0px;margin-top: 1px;">油菜花温泉公寓琼海卧龙谷店高级观景大床房</p>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <div class="dataStrDiv">
+                            <li>
+                                <p >入住时间</p>
+                                <p >2018-10-16</p>
+                            </li>
+                            <div class="line"></div>
+                            <li>
+                                <p>退房时间</p>
+                                <p >2018-10-18</p>
+                            </li>
+                        </div>
+                        <input type="hidden" name="data[begin_date]" id="begin_date" value="2018-10-16">
+                        <input type="hidden" name="data[end_date]" id="end_date" value="2018-10-18">
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_select weui-cell_select-after">
+                    <div class="weui-cell__hd"><label class="weui-label">房间数：</label></div>
+                    <div class="weui-cell__bd">
+                        <select id="num" class="weui-select" name="data[num]" onchange="changeNum()">
+                            <option value="1">1间</option><option value="2">2间</option><option value="3">3间</option><option value="4">4间</option><option value="5">5间</option><option value="6">6间</option><option value="7">7间</option><option value="8">8间</option><option value="9">9间</option><option value="10">10间</option>                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">入住人：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" name="data[truename]" maxlength="10" placeholder="姓名" value="徐光伟">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">手机号：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="number" name="data[phone]" maxlength="11" placeholder="用于接收通知" value="15692532987">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">身份证：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" name="data[idcard]" maxlength="18" placeholder="用于住房登记" value="460034198308050019">
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell" id="priceAllDiv" style="display: none">
+                    <div class="weui-cell__hd"><label class="weui-label">房费：</label></div>
+                    <div class="weui-cell__bd priceAll" id="priceAll">360</div>
+                </div>
+                <div class="weui-cell" id="zhekouDiv" style="display: none">
+                    <div class="weui-cell__hd"><label class="weui-label">折扣：</label></div>
+                    <div class="weui-cell__bd discount" id="zhekou"></div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">合计费用：</label></div>
+                    <div class="weui-cell__bd priceNow" id="priceNow">360</div>
+                </div>
+            </div>
+        </form>
+
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" onclick="save()">提交订单</a>
+        </div>
+    </div>
+</div>
+
+<div id="rentLoadingToast" style="display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据提交中</p>
+    </div>
+</div>
+  
+</body>
+</html>

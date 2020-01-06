@@ -1,0 +1,120 @@
+.html {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rentBox {
+    overflow: hidden;
+}
+
+ul, li, dl, dd, dt {
+    list-style: outside none;
+    padding: 0;
+    margin: 0;
+}
+
+.rentBox a {
+    overflow: hidden;
+    display: block;
+    color: #333;
+    background: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.rentBox a .imgurl {
+    width: 100%;
+    position: relative;
+    height: 150px;
+}
+
+.rentBox a .imgurl img {
+    width: 100%;
+    height: 150px;
+    vertical-align: middle;
+}
+
+.rentBox a .imgurl h2 {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    padding: 0 10px;
+    border-radius: 12px 0 0 12px;
+    background: rgba(51,51,51,0.8);
+    color: #fff;
+}
+
+.rentBox a .text {
+    padding: 10px;
+}
+
+.rentBox a .text .t-con {
+    display: -webkit-box;
+}
+
+.rentBox a .text .detail {
+    -webkit-box-flex: 1;
+}
+
+.rentBox a .text .detail h3 {
+    font-size: 17px;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.rentBox a .text .detail h4 {
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    font-weight: 400;
+    margin: 0;
+    color: #888;
+}
+
+.rentBox a .text .detail h4 span {
+    color: #f60;
+}
+
+.rentBox a .text .price {
+    padding-left: 10px;
+    color: #f60;
+    font-size: 17px;
+    text-align: center;
+}
+
+.rentBox a .text .price p {
+    line-height: 25px;
+}
+
+.rentBox a .text .price i {
+    font-style: normal;
+    font-size: 12px;
+}
+
+.rentBox a .text .price span {
+    font-size: 20px;
+}
+
+
+
+.rentBox a .text .keywords {
+    margin-top: -2px;
+}
+
+
+.rentBox a .text .keywords span {
+    font-size: 12px;
+    border: #00B290 1px solid;
+    border-radius: 3px;
+    color: #00B290;
+    margin-right: 5px;
+    padding: 2px 5px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}

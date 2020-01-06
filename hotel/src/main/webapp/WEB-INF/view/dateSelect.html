@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>入住日期填写</title>
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="icon" type="image/png" href="../../../assets/i/favicon.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="apple-touch-icon-precomposed"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="../../../assets/i/app-icon72x72@2x.png">
+<meta name="msapplication-TileColor" content="#0e90d2">
+
+
+<link rel="stylesheet" href="../../../assets/css/dateSelect.css">
+ <script src="../../../assets/js/jquery.min.js"></script>
+ <script src="../../../assets/js/datepacker_rent.js"></script>
+ 
+   <script>
+        $(function () {
+            getDatePrice('calendar');
+        });
+        function getDatePrice(e){
+            var rent_id=$('#rent_id').val();
+            $.get("/wechat/hotel/getDatePrice",{rent_id:rent_id},function(data) {
+                pickerEvent.setPriceArr(data);
+                pickerEvent.Init(e);
+            });
+        }
+        //关闭日期窗口
+        function cancel() {
+            history.back();
+        }
+        //计算费用
+        function cost()
+        {
+            var rent_id=$('#rent_id').val();
+            var begin_date=$('#begin_date').val();
+            var end_date=$('#end_date').val();
+            if(!rent_id||!begin_date||!end_date)return false;
+            $('#loadingToast').show();
+            /* $.get('/wechat/hotel/cost',{rent_id:rent_id,begin_date:begin_date,end_date:end_date},function(data){
+                $('#loadingToast').hide();
+                if(data.status==1){
+                    var param="?id="+rent_id;
+                    param+="&begin_date="+begin_date;
+                    param+="&end_date="+end_date;
+
+                    location.href="/wechat/hotel/orderConfirm"+param;
+                }
+                else{
+                    alert(data.msg);
+                }
+            }) */
+            
+            location.href="/wechat/hotel/orderConfirm";
+        }
+        function confirm() {
+            var beginDate='';
+            var endDate='';
+            $('#calendar li.selected').each(function (index) {
+                var v=$(this).attr('date');
+                if(!beginDate)beginDate=v;
+                else endDate=v;
+            });
+            if(!beginDate||!endDate){
+                alert('请选择日期后再确定');
+                return false;
+            }
+            $('#begin_date').val(beginDate);
+            $('#end_date').val(endDate);
+            cost();
+
+        }
+    </script>
+ 
+</head>
+<body>
+	
+	<div class="html"> 
+   <input type="hidden" id="rent_id" value="1001" /> 
+   <input type="hidden" id="begin_date" /> 
+   <input type="hidden" id="end_date" /> 
+   <div class="getDateDiv"> 
+    <div class="dateHead"> 
+     <div class="dateBtnDiv"> 
+      <a class="cancel" onclick="cancel()">取消</a> 
+      <li id="status"></li> 
+      <a class="confirm" onclick="confirm()">确定</a> 
+     </div> 
+    </div> 
+    <div class="dateHeadBot"></div> 
+    <div id="calendar" class="calendar">
+    </div> 
+   </div> 
+   <div id="loadingToast" style="display: none;"> 
+    <div class="weui-mask_transparent"></div> 
+    <div class="weui-toast"> 
+     <i class="weui-loading weui-icon_toast"></i> 
+     <p class="weui-toast__content">数据提交中</p> 
+    </div> 
+   </div> 
+  </div>
+  
+</body>
+</html>

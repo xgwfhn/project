@@ -1,0 +1,617 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>客房预订</title>
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="icon" type="image/png" href="../../../assets/i/favicon.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="apple-touch-icon-precomposed"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="../../../assets/i/app-icon72x72@2x.png">
+<meta name="msapplication-TileColor" content="#0e90d2">
+
+<link rel="stylesheet" href="../../../assets/css/amazeui.min.css">
+<link rel="stylesheet" href="../../../assets/css/app.css">
+<link rel="stylesheet" href="../../../assets/css/hotelDetail.css">
+ <script src="../../../assets/js/jquery.min.js"></script>
+  <script src="../../../assets/js/swipe_2.js"></script>
+  <script src="../../../assets/js/iscroll.js"></script>
+ 
+ 
+ 
+</head>
+<body>
+	 <div class="html"> 
+   <div class="my-navbar"> 
+    <div class="item on"> 
+     <div class="bd">
+      详情
+     </div> 
+    </div> 
+    <div class="item" onclick="location.href='/Rent/commentList/1008.html'"> 
+     <div class="bd">
+      评价
+     </div> 
+    </div> 
+   </div> 
+   <div class="nav_bot"></div> 
+   <div class="rentDetailBox"> 
+    <input type="hidden" id="rent_id" value="1008" /> 
+    <div class="imgDiv"> 
+     <div class="btn-xfxq-hxt"> 
+      <div class="priceDiv">
+       <span>280</span>
+      </div> 
+      <div class="index_txt">
+       <span id="photo_index">3</span>/41
+      </div> 
+      <!--
+                <div style="position:relative">
+                    <a class="btn-xfxq-hxt-l" href="javascript:;" onclick="javascript:xcslider.prev();"></a>
+                    <a class="btn-xfxq-hxt-r" href="javascript:;" onclick="javascript:xcslider.next();"></a>
+                </div>--> 
+      <div id="xcslider" class="swipe" style="visibility: visible;"> 
+       <div class="swipe-wrap" style="width: 13120px;"> 
+        <div data-index="0" style="width: 320px; left: 0px; transition-duration: 0ms; transform: translate(-320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1723cca58.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1723cca58.jpg" /></a> 
+        </div>
+        <div data-index="1" style="width: 320px; left: -320px; transition-duration: 500ms; transform: translate(-320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17244ec2f.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17244ec2f.jpg" /></a> 
+        </div>
+        <div data-index="2" style="width: 320px; left: -640px; transition-duration: 500ms; transform: translate(0px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1724b992b.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1724b992b.jpg" /></a> 
+        </div>
+        <div data-index="3" style="width: 320px; left: -960px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17253f80b.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17253f80b.jpg" /></a> 
+        </div>
+        <div data-index="4" style="width: 320px; left: -1280px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1725a67fe.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1725a67fe.jpg" /></a> 
+        </div>
+        <div data-index="5" style="width: 320px; left: -1600px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17260277b.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17260277b.jpg" /></a> 
+        </div>
+        <div data-index="6" style="width: 320px; left: -1920px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172674e89.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172674e89.jpg" /></a> 
+        </div>
+        <div data-index="7" style="width: 320px; left: -2240px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1726c5046.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1726c5046.jpg" /></a> 
+        </div>
+        <div data-index="8" style="width: 320px; left: -2560px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1727158a8.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1727158a8.jpg" /></a> 
+        </div>
+        <div data-index="9" style="width: 320px; left: -2880px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17278bcbf.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17278bcbf.jpg" /></a> 
+        </div>
+        <div data-index="10" style="width: 320px; left: -3200px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1727d8173.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1727d8173.jpg" /></a> 
+        </div>
+        <div data-index="11" style="width: 320px; left: -3520px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17284ec2f.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17284ec2f.jpg" /></a> 
+        </div>
+        <div data-index="12" style="width: 320px; left: -3840px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1728a67fe.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1728a67fe.jpg" /></a> 
+        </div>
+        <div data-index="13" style="width: 320px; left: -4160px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1728e388e.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1728e388e.jpg" /></a> 
+        </div>
+        <div data-index="14" style="width: 320px; left: -4480px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172978b92.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172978b92.jpg" /></a> 
+        </div>
+        <div data-index="15" style="width: 320px; left: -4800px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1729d446a.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f1729d446a.jpg" /></a> 
+        </div>
+        <div data-index="16" style="width: 320px; left: -5120px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172a3f80b.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172a3f80b.jpg" /></a> 
+        </div>
+        <div data-index="17" style="width: 320px; left: -5440px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172a936d1.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172a936d1.jpg" /></a> 
+        </div>
+        <div data-index="18" style="width: 320px; left: -5760px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172b20fc3.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172b20fc3.jpg" /></a> 
+        </div>
+        <div data-index="19" style="width: 320px; left: -6080px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172b842ad.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172b842ad.jpg" /></a> 
+        </div>
+        <div data-index="20" style="width: 320px; left: -6400px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172c2c6de.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172c2c6de.jpg" /></a> 
+        </div>
+        <div data-index="21" style="width: 320px; left: -6720px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172c973da.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172c973da.jpg" /></a> 
+        </div>
+        <div data-index="22" style="width: 320px; left: -7040px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172d65a65.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172d65a65.jpg" /></a> 
+        </div>
+        <div data-index="23" style="width: 320px; left: -7360px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172e0de96.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172e0de96.jpg" /></a> 
+        </div>
+        <div data-index="24" style="width: 320px; left: -7680px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172e4af26.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f172e4af26.jpg" /></a> 
+        </div>
+        <div data-index="25" style="width: 320px; left: -8000px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5089fc7.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5089fc7.jpg" /></a> 
+        </div>
+        <div data-index="26" style="width: 320px; left: -8320px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea50ed2b1.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea50ed2b1.jpg" /></a> 
+        </div>
+        <div data-index="27" style="width: 320px; left: -8640px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5173191.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5173191.jpg" /></a> 
+        </div>
+        <div data-index="28" style="width: 320px; left: -8960px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea520478c.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea520478c.jpg" /></a> 
+        </div>
+        <div data-index="29" style="width: 320px; left: -9280px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea52862be.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea52862be.jpg" /></a> 
+        </div>
+        <div data-index="30" style="width: 320px; left: -9600px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea52e1b96.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea52e1b96.jpg" /></a> 
+        </div>
+        <div data-index="31" style="width: 320px; left: -9920px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5367a76.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5367a76.jpg" /></a> 
+        </div>
+        <div data-index="32" style="width: 320px; left: -10240px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea53d2772.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea53d2772.jpg" /></a> 
+        </div>
+        <div data-index="33" style="width: 320px; left: -10560px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea544922e.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea544922e.jpg" /></a> 
+        </div>
+        <div data-index="34" style="width: 320px; left: -10880px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea54a4b06.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea54a4b06.jpg" /></a> 
+        </div>
+        <div data-index="35" style="width: 320px; left: -11200px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea550fea7.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea550fea7.jpg" /></a> 
+        </div>
+        <div data-index="36" style="width: 320px; left: -11520px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5558652.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5558652.jpg" /></a> 
+        </div>
+        <div data-index="37" style="width: 320px; left: -11840px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5608495.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5608495.jpg" /></a> 
+        </div>
+        <div data-index="38" style="width: 320px; left: -12160px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea56d647b.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea56d647b.jpg" /></a> 
+        </div>
+        <div data-index="39" style="width: 320px; left: -12480px; transition-duration: 0ms; transform: translate(320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5736101.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea5736101.jpg" /></a> 
+        </div>
+        <div data-index="40" style="width: 320px; left: -12800px; transition-duration: 0ms; transform: translate(-320px, 0px) translateZ(0px); display: table-cell; vertical-align: top;"> 
+         <a href="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea57ac518.jpg"><img style="display:block; max-width:100%; height:225px;" src="https://cdn.yocole.com/upload/rent/2018/01/08/5a52ea57ac518.jpg" /></a> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="clear"></div> 
+     </div> 
+     <script>
+                var xcslider = new Swipe2(document.getElementById("xcslider"), {
+                    startSlide: 0,
+                    speed: 500,
+                    //auto:2000,
+                    continuous:true,
+                    callback: function(index,elem,event) {
+                        $('#photo_index').text(index+1);
+                    },
+                });
+            </script> 
+    </div> 
+    <div class="base"> 
+     <h2>豪华两房套房</h2> 
+     <h3>油菜花温泉公寓琼海卧龙谷店</h3> 
+     <div class="keywords"> 
+      <i>热带森林</i>
+      <i>多住优惠</i>
+      <i>亲子度假</i>
+      <i>实拍</i> 
+     </div> 
+     <div class="comment">
+      <i>5</i>/5分
+     </div> 
+     <input type="hidden" id="is_fav" value="0" /> 
+     <div class="fav fav_no" onclick="fav(this)"></div> 
+    </div> 
+    <div class="hxbedkey"> 
+     <div class="item"> 
+      <img src="https://cdn.m.yocole.com/Public/images/fangjianmdpi.png" /> 
+      <div class="title">
+       两房一厅
+      </div> 
+      <div class="desc hxdesc"> 
+       <div class="line"> 
+        <span>高级公寓</span>
+        <span>大阳台</span> 
+       </div>
+       <div class="line"> 
+        <span>可做饭</span>
+        <span>可带宠物</span> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="item"> 
+      <img src="https://cdn.m.yocole.com/Public/images/muchuangmdpi.png" /> 
+      <div class="title">
+       2床 宜住四人
+      </div> 
+      <div class="desc"> 
+       <div>
+        1.8米大床&times;1
+       </div>
+       <div>
+        1.5米大床&times;1
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="weui-cells weui-cells_after-title"> 
+     <a class="weui-cell weui-cell_access" href="https://api.map.baidu.com/marker?location=19.219105,110.420045&amp;title=油菜花温泉公寓琼海卧龙谷店&amp;content=琼海市嘉积镇官塘旅游度假区官塘大道北卧龙谷5号楼104房&amp;output=html"> 
+      <div class="weui-cell__hd">
+       <img src="https://cdn.m.yocole.com/Public/images/dituxhdpi.png" style="width:20px;margin-right:5px;display:block" />
+      </div> 
+      <div class="weui-cell__bd" style="font-size: 14px">
+       琼海市嘉积镇官塘旅游度假区官塘大道北卧龙谷5号楼104房
+      </div> 
+      <div class="weui-cell__ft"></div> </a> 
+     <a class="weui-cell weui-cell_access" href="tel:18184689970"> 
+      <div class="weui-cell__hd">
+       <img src="https://cdn.m.yocole.com/Public/images/bodadianhuamdpi.png" style="width:20px;margin-right:5px;display:block" />
+      </div> 
+      <div class="weui-cell__bd">
+       18184689970
+      </div> 
+      <div class="weui-cell__ft"></div> </a> 
+    </div> 
+    <div class="blank10"></div> 
+    <div class="reminder"> 
+     <div class="title">
+      温馨提示
+     </div> 
+     <div class="con">
+      1. 凭身份证入住公寓，一人一证。 
+      <br />2. 客房12点后入住，次日12点前退房。 
+      <br />3. 酒店提供发票，请到前台开具。 
+      <br />4. 如需做饭，请向前台申领厨具用品。 
+      <br />5. 到公寓门卫处报油菜花公寓的客人或致电给前台。 
+      <br />6. 酒店提供免费停车场。 
+      <br />7. 付款可通过微信、支付宝、银联刷卡均可。
+     </div> 
+    </div> 
+    <div class="blank20"></div> 
+    <script type="text/javascript">
+            function click_hidden(str) {
+                if($('#'+str+'_con').css('display')=="none"){
+                    $('#'+str+'_con').show();
+                    $('#'+str+'_img_up').hide();
+                    $('#'+str+'_img_down').show();
+                }else{
+                    $('#'+str+'_con').hide();
+                    $('#'+str+'_img_up').show();
+                    $('#'+str+'_img_down').hide();
+                }
+            }
+        </script> 
+    <div class="downView first"> 
+     <div class="title" onclick="click_hidden('ms')"> 
+      <div class="bd">
+       房屋描述
+      </div> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangxiamdpi.png" id="ms_img_up" style="display: none;" /> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangshangmdpi.png" id="ms_img_down" style="" /> 
+     </div> 
+    </div> 
+    <div class="downViewCon" id="ms_con">
+     油菜花温泉公寓-官塘卧龙谷店，坐落在享有世界级SPA休闲度假胜地美誉的“中国温泉之乡”-琼海官塘，美丽的万泉河畔。距琼海市区5公里，距琼海高铁站8公里,仅10-15分钟车程，交通便捷。 
+     <br />卧龙谷社区，在官塘属于档次较高的温泉度假社区，拥有两个大型泳池和9个温泉泡池，社区环境优美、热带园林郁郁葱葱，适合家人、情侣度假放松身心。油菜花酒店客房甄选卧龙谷优质景观房源，为您提供高品质的度假体验。舒适的软床、热带风情内饰和超苛刻卫生标准，打造特色民宿，专为懂得品鉴的您！ 
+     <br />卧龙谷温泉温度高达70摄氏度，富含偏硅酸、氟、溴、碘、钾、铁、镭、锶、氡等微量元素。泡温泉可舒展筋骨、缓解疲劳、疏通经络、美肤养颜排毒。 
+     <br />油菜花温泉公寓官塘卧龙谷店，可做饭，我们管家可提供全套精致厨具用品；每间客房也都有经消毒的洗衣机使用，阳台可晾晒衣物。入住油菜花温泉公寓，会让您感受到酒店的配置和家一般的温暖和便利。
+    </div> 
+    <div class="downView"> 
+     <div class="title" onclick="click_hidden('pt')"> 
+      <div class="bd">
+       配套设施
+      </div> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangxiamdpi.png" id="pt_img_up" style="display: none;" /> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangshangmdpi.png" id="pt_img_down" style="" /> 
+     </div> 
+    </div> 
+    <div class="ptCon" id="pt_con" >
+     <div class="item"> 
+      <div class="subTitle">
+       居家
+      </div> 
+      <dd> 
+       <i class="dianshi"></i> 
+       <p>电视</p> 
+      </dd> 
+      <dd> 
+       <i class="bingxiang"></i> 
+       <p>冰箱</p> 
+      </dd> 
+      <dd> 
+       <i class="xiyiji"></i> 
+       <p>洗衣机</p> 
+      </dd> 
+      <dd> 
+       <i class="kongtiao"></i> 
+       <p>空调</p> 
+      </dd> 
+      <dd> 
+       <i class="wifi"></i> 
+       <p>无线网络</p> 
+      </dd> 
+      <dd> 
+       <i class="dianreshuihu"></i> 
+       <p>电热水壶</p> 
+      </dd> 
+      <dd> 
+       <i class="chuifengji"></i> 
+       <p>吹风机</p> 
+      </dd> 
+      <dd> 
+       <i class="xiyiye"></i> 
+       <p>洗衣液</p> 
+      </dd> 
+      <dd> 
+       <i class="liangyijia"></i> 
+       <p>晾衣架</p> 
+      </dd> 
+      <dd> 
+       <i class="tuoxie"></i> 
+       <p>拖鞋</p> 
+      </dd> 
+      <dd> 
+       <i class="shafa"></i> 
+       <p>沙发</p> 
+      </dd> 
+      <dd> 
+       <i class="dianti"></i> 
+       <p>电梯</p> 
+      </dd> 
+      <dd> 
+       <i class="miehuoqi"></i> 
+       <p>灭火器</p> 
+      </dd> 
+      <dd> 
+       <i class="zhenxianbao"></i> 
+       <p>针线包</p> 
+      </dd> 
+     </div> 
+     <div class="item"> 
+      <div class="subTitle">
+       卫浴
+      </div> 
+      <dd> 
+       <i class="quantianreshui"></i> 
+       <p>全天热水</p> 
+      </dd> 
+      <dd> 
+       <i class="duliweiyu"></i> 
+       <p>独立卫浴</p> 
+      </dd> 
+      <dd> 
+       <i class="maojin"></i> 
+       <p>毛巾</p> 
+      </dd> 
+      <dd> 
+       <i class="yujin"></i> 
+       <p>浴巾</p> 
+      </dd> 
+      <dd> 
+       <i class="yaju"></i> 
+       <p>牙具</p> 
+      </dd> 
+      <dd> 
+       <i class="xifashui"></i> 
+       <p>洗发水</p> 
+      </dd> 
+      <dd> 
+       <i class="weishengzhi"></i> 
+       <p>卫生纸</p> 
+      </dd> 
+     </div> 
+     <div class="item"> 
+      <div class="subTitle">
+       餐厨
+      </div> 
+      <dd> 
+       <i class="diancilu"></i> 
+       <p>电磁炉</p> 
+      </dd> 
+      <dd> 
+       <i class="tangguo"></i> 
+       <p>汤锅</p> 
+      </dd> 
+      <dd> 
+       <i class="daoju"></i> 
+       <p>刀具</p> 
+      </dd> 
+      <dd> 
+       <i class="dianfanbao"></i> 
+       <p>电饭煲</p> 
+      </dd> 
+      <dd> 
+       <i class="canju"></i> 
+       <p>餐具</p> 
+      </dd> 
+     </div> 
+     <div class="item"> 
+      <div class="subTitle">
+       特色
+      </div> 
+      <dd> 
+       <i class="mianfeitingche"></i> 
+       <p>免费停车</p> 
+      </dd> 
+      <dd> 
+       <i class="jiaochefuwu"></i> 
+       <p>叫车服务</p> 
+      </dd> 
+      <dd> 
+       <i class="zuchefuwu"></i> 
+       <p>租车服务</p> 
+      </dd> 
+      <dd> 
+       <i class="yiliaojiuyuan"></i> 
+       <p>医疗救援</p> 
+      </dd> 
+      <dd> 
+       <i class="youyongchi"></i> 
+       <p>游泳池</p> 
+      </dd> 
+      <dd> 
+       <i class="xinglijicun"></i> 
+       <p>行李寄存</p> 
+      </dd> 
+      <dd> 
+       <i class="jiaoxingfuwu"></i> 
+       <p>叫醒服务</p> 
+      </dd> 
+      <dd> 
+       <i class="jiedaiwaibin"></i> 
+       <p>接待外宾</p> 
+      </dd> 
+     </div>
+    </div> 
+    <div class="downView"> 
+     <div class="title" onclick="click_hidden('rz')"> 
+      <div class="bd">
+       入住须知
+      </div> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangxiamdpi.png" id="rz_img_up" /> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangshangmdpi.png" id="rz_img_down" style="display: none" /> 
+     </div> 
+    </div> 
+    <div class="downViewCon" id="rz_con">
+     1.入住时间：14:00之后；退房时间：12:00之前；如当天凌晨至8:00之前入住，则当天12:00前退房；当天8:00后入住则次日12:00退房。 
+     <br />2.入住押金：到店后在前台支付300元押金。 
+     <br />3.在酒店支付房款、押金、购物等均可通过现金、微信、支付宝、银联刷卡支付。 
+     <br />4.加床：不能加床。 
+     <br />5.做饭：酒店可提供整套做饭厨具，收取300元押金。收费30元/天（除夕至正月十五为50元/天） 
+     <br />6.损坏赔偿：按前台客赔标准执行赔偿。 
+     <br />7.有偿购买：为了方便客户，酒店提供部分常用食品。 
+     <br />8.无偿使用：针线包、急救药品、充电器、灭火器等。 
+     <br />9.本酒店仅提供增值税普通发票。
+    </div> 
+    <div class="downView"> 
+     <div class="title" onclick="click_hidden('cx')"> 
+      <div class="bd">
+       出行攻略
+      </div> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangxiamdpi.png" id="cx_img_up" /> 
+      <img src="https://cdn.m.yocole.com/Public/images/xiangshangmdpi.png" id="cx_img_down" style="display: none" /> 
+     </div> 
+    </div> 
+    <div class="downViewCon" id="cx_con">
+     1.琼海位于海南岛的东部，是一个清新美丽、文化气息浓厚的田园花园城市。 
+     <br />2.交通：酒店距琼海市区5公里，距琼海高铁站8公里,仅10-15分钟车程。离海口90公里，离三亚170公里，离博鳌机场8公里，交通非常便捷。 
+     <br />3.酒店周边旅游资源有：中国温泉之乡、北仍村、白石岭风景区、红色娘子军纪念园、玉带滩、博鳌亚洲论坛、万泉河风景区。 
+     <br />4.美食资源：海南传统四大名菜之加积鸭；还有官塘特有的温泉鹅，到官塘必须品尝的美食。万泉河河鲜、潭门千年渔港深海海鲜，均不可错过。
+    </div> 
+    <div class="blank20"></div> 
+    <div class="otherHxDiv"> 
+     <div class="title">
+      其他户型
+     </div> 
+     <div class="con" id="wrapper" style="touch-action: pan-y pinch-zoom;"> 
+      <div id="otherBody" style="width: 574px; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);"> 
+       <a class="other_item" href="/Rent/detail/1001.html" style="width: 272px; height: 226px;"> <img src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f17cc8bcbf.jpg" style="width: 272px; height: 136px;" /> 
+        <div class="text"> 
+         <div class="t-con"> 
+          <div class="detail"> 
+           <div class="title">
+            高级观景大床房
+           </div> 
+           <div class="desc">
+            一房一厅 | 48平米 | 1床 | 
+            <span>5分</span>
+           </div> 
+          </div> 
+          <div class="priceDiv"> 
+           <div class="price">
+            <i>￥</i>
+            <span>180</span>
+           </div> 
+          </div> 
+         </div> 
+         <div class="keywords"> 
+          <span>情侣蜜月</span>
+          <span>商务出行</span>
+          <span>多住优惠</span>
+          <span>实拍</span> 
+         </div> 
+        </div> </a>
+       <a class="other_item" href="/Rent/detail/1007.html" style="width: 272px; height: 226px;"> <img src="https://cdn.yocole.com/upload/rent/2018/01/05/5a4f060fbd634.jpg" style="width: 272px; height: 136px;" /> 
+        <div class="text"> 
+         <div class="t-con"> 
+          <div class="detail"> 
+           <div class="title">
+            高级两房套房
+           </div> 
+           <div class="desc">
+            两房一厅 | 64平米 | 2床 | 
+            <span>5分</span>
+           </div> 
+          </div> 
+          <div class="priceDiv"> 
+           <div class="price">
+            <i>￥</i>
+            <span>260</span>
+           </div> 
+          </div> 
+         </div> 
+         <div class="keywords"> 
+          <span>家庭度假</span>
+          <span>温泉之旅</span>
+          <span>朋友聚会</span>
+          <span>实拍</span> 
+         </div> 
+        </div> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <script>
+                var winW=$(window).width();
+                if(winW>640)winW=640;
+                var otherHxSigWidth=winW*0.85;
+                var otherHxSigHeight=otherHxSigWidth/2;
+                var num=$('#otherBody').children('.other_item').length;
+                var otherHxBodyWidth=(otherHxSigWidth+15)*num;
+                $('.other_item img').css({"width":otherHxSigWidth,"height":otherHxSigHeight});
+                $('.other_item').css({"width":otherHxSigWidth,"height":otherHxSigHeight+90});
+                $('#otherBody').css({"width":otherHxBodyWidth});
+                new IScroll('#wrapper', { scrollX: true, scrollY: false, eventPassthrough: true});
+            </script> 
+   </div> 
+   <div class="foot_reserve_blank"></div> 
+   <div class="foot_reserve_div"> 
+    <div class="detail"> 
+     <div class="bd"> 
+      <span class="price_label">预付特惠价：</span> 
+      <span class="price">280</span> 
+     </div> 
+    </div> 
+    <div class="btns"> 
+     <a class="foot_btn" href="/wechat/hotel/dateSelect">立即预订</a> 
+    </div> 
+   </div> 
+  </div>
+</body>
+</html>

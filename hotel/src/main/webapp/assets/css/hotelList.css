@@ -1,0 +1,72 @@
+.html {
+     max-width: 640px;
+    margin: 0 auto;
+    position: relative; 
+}
+
+.rentIndex {
+    /* overflow: hidden; */
+}
+
+ul, li, dl, dd, dt {
+     list-style: outside none;
+    padding: 0;
+    margin: 0; 
+}
+
+.rentIndex a {
+     overflow: hidden;
+    display: block;
+    color: #333;
+    background: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px #ccc; 
+}
+
+.rentIndex a .imgurl {
+     width: 100%;
+    position: relative;
+    height: 150px; 
+}
+
+.rentIndex a .text {
+     padding: 10px;
+    overflow: hidden; 
+}
+
+.rentIndex a .imgurl img {
+     width: 100%;
+    height: 150px;
+    vertical-align: middle; 
+}
+
+.rentIndex a .imgurl h2 {
+     position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 10px;
+    border-radius: 12px 0 0 12px;
+    background: rgba(51,51,51,0.8);
+    color: #fff; 
+}
+
+.rentIndex a .text h3 {
+     font-size: 17px;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 25px; 
+}
+
+.rentIndex a .text h4 {
+     font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    font-weight: 400;
+    color: #888; 
+}
+
+h1, h2, h3, h4 {
+    margin: 0; 
+}

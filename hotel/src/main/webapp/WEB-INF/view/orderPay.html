@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>订单确认</title>
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="icon" type="image/png" href="../../../assets/i/favicon.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="apple-touch-icon-precomposed"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="../../../assets/i/app-icon72x72@2x.png">
+<meta name="msapplication-TileColor" content="#0e90d2">
+
+<link rel="stylesheet" href="../../../assets/css/orderPay.css">
+ <script src="../../../assets/js/jquery.min.js"></script>
+
+ <script type="text/javascript">
+        $(function () {
+            calcTime();
+        });
+        function calcTime() {
+            var surplus_time=$('#surplus_time').val();
+            surplus_time--;
+            if(surplus_time==0){
+                $('#waitDiv').hide();
+                $('#closeDiv').show();
+                $('#btn_pay').hide();
+                return;
+            }
+            $('#surplus_time').val(surplus_time);
+            $('#surplus_time_str').text(timeToStr(surplus_time));
+            if (surplus_time>0){
+                setTimeout(function () {
+                    calcTime();
+                },1000);
+            }
+
+        }
+        function timeToStr(second_time){
+            var time = parseInt(second_time) + "秒";
+            if (parseInt(second_time) > 60) {
+
+                var second = parseInt(second_time) % 60;
+                var min = parseInt(second_time / 60);
+                time = min + "分" + second + "秒";
+
+                if (min > 60) {
+                    min = parseInt(second_time / 60) % 60;
+                    var hour = parseInt(parseInt(second_time / 60) / 60);
+                    time = hour + "小时" + min + "分" + second + "秒";
+
+                    if (hour > 24) {
+                        hour = parseInt(parseInt(second_time / 60) / 60) % 24;
+                        var day = parseInt(parseInt(parseInt(second_time / 60) / 60) / 24);
+                        time = day + "天" + hour + "小时" + min + "分" + second + "秒";
+                    }
+                }
+
+            }
+            return time;
+        }
+
+        //调用微信JS api 支付
+        function jsApiCall()
+        {
+            WeixinJSBridge.invoke(
+                    'getBrandWCPayRequest',
+                    {"appId":"wxfe04254b7a084da0","nonceStr":"01ihxr8q4lsen152pubeotozswo5v8c1","package":"prepay_id=wx20194000304583125917a6e00954160937","signType":"MD5","timeStamp":"1540035600","paySign":"569F2474A7AC55AEFC82CC0A46EDE422"},
+            function(res){
+                WeixinJSBridge.log(res.err_msg);
+                //alert(res.err_code+res.err_desc+res.err_msg);
+                if(res.err_msg == "get_brand_wcpay_request:ok"){
+                    //alert("支付成功！");
+                    location.href="/MsgPage?url=/Rent/orderDetail/15400355901138896.html";
+                }
+                else alert("支付失败！");
+                }
+            );
+        }
+
+        function callpay()
+        {
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="html">
+    <div class="blank10"></div>
+    <input type="hidden" id="surplus_time" value="1791">
+    <div class="waitDiv" id="waitDiv"  >
+        <i class="weui-icon-waiting payIcon"></i>
+        <div class="detail">
+            <div>请在 <span id="surplus_time_str"></span> 内完成支付</div>
+            <div>过期订单将关闭</div>
+        </div>
+    </div>
+    <div class="waitDiv" id="closeDiv" style="display:none" >
+        <i class="weui-icon-warn payIcon"></i>
+        <div class="detail">
+            <div class="warn_info">订单已超时关闭，请重新下单</div>
+        </div>
+    </div>
+
+
+    <div class="weui-form-preview">
+        <div class="weui-form-preview__hd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">付款金额</label>
+                <em class="weui-form-preview__value">¥280.00</em>
+            </div>
+        </div>
+        <div class="weui-form-preview__bd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">订单号</label>
+                <span class="weui-form-preview__value">15400355901138896</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">酒店</label>
+                <span class="weui-form-preview__value">油菜花海洋公寓万宁神州半岛店</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">房型</label>
+                <span class="weui-form-preview__value">豪华海景大床套房</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">入住退房</label>
+                <span class="weui-form-preview__value">2018-10-25 ~ 2018-10-26</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">数量</label>
+                <span class="weui-form-preview__value">×1</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="payBox">
+        <div class="weui-cells__title">选择支付方式</div>
+        <div class="weui-cells weui-cells_radio">
+            <label class="weui-cell weui_check__label">
+                <div class="weui-cell__bd">
+                    <p class="wxico"></p>
+                    <p class="wxpay">微信支付</p>
+                    <p class="wximg"></p>
+                </div>
+                <!-- <div class="weui-cell__ft">
+                    <input type="radio" name="pay_type" value="wxpay" class="weui-check" checked="checked">
+                    <span class="weui-icon-checked"></span>
+                </div> -->
+            </label>
+        </div>
+    </div>
+
+    <div class="weui-btn-area">
+        <a class="weui-btn weui-btn_primary" id="btn_pay" onClick="callpay()"  >立即支付 <span>￥280.00</span></a>
+    </div>
+</div>
+
+</body>
+</html>

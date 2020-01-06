@@ -1,0 +1,200 @@
+
+.html {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.body {
+    font-family: Helvetica Neue,Helvetica,sans-serif;
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8;
+    background: #f5f5f5;
+}
+
+.getDateDiv {
+    overflow: hidden;
+}
+
+
+.getDateDiv .dateHead {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.getDateDiv .dateHead .dateBtnDiv {
+    height: 45px;
+    line-height: 45px;
+    display: -webkit-box;
+    background: #f5f5f9;
+    border-bottom: #ddd 1px solid;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.getDateDiv .dateHead .dateBtnDiv a {
+    display: block;
+    width: 20%;
+    text-align: center;
+    color: #00B290;
+}
+
+.getDateDiv .dateHead .dateBtnDiv li {
+    -webkit-box-flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.getDateDiv .dateHead .dateBtnDiv li:before {
+    width: 1px;
+    background: #ccc;
+    height: 21px;
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+.getDateDiv .dateHead .dateBtnDiv li:after {
+    width: 1px;
+    background: #ccc;
+    height: 21px;
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+.getDateDiv .dateHead .dateBtnDiv a {
+    display: block;
+    width: 20%;
+    text-align: center;
+    color: #00B290;
+}
+
+.getDateDiv .dateHeadBot {
+    overflow: hidden;
+    height: 45px;
+}
+
+.calendar {
+    overflow: hidden;
+    background: #fff;
+}
+
+.calendar .month {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 17px;
+}
+
+.calendar .weekNumDiv {
+    height: 35px;
+    line-height: 35px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.calendar .weekNumDiv li {
+    float: left;
+    width: 14.2857%;
+    text-align: center;
+}
+
+.calendar ul {
+    overflow: hidden;
+    width: 100%;
+}
+
+.calendar ul li.disabled {
+    overflow: hidden;
+}
+
+.calendar ul li.on a {
+    color: #333;
+}
+
+.calendar ul li a {
+    padding-bottom: 100%;
+    display: block;
+    position: relative;
+    color: #999;
+    font-size: 14px;
+}
+
+.calendar ul li {
+    float: left;
+    width: 14.2857%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.calendar ul li a b {
+    position: absolute;
+    width: 100%;
+    bottom: 45%;
+    left: 0;
+    height: 20px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.calendar ul li.on a em {
+    color: #f60;
+}
+
+.calendar ul li a em {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    line-height: 11px;
+    font-style: normal;
+    
+}
+
+.calendar ul li a span {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    line-height: 11px;
+    display: none;
+}
+
+ul, li, dl, dd, dt {
+    list-style: outside none;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    outline: none;
+}
+
+.calendar ul li a em dfn {
+    font-style: normal;
+}
+
+.calendar ul li.selected a {
+    background: #00b290;
+    color: #fff;
+}
+
+.getDateDiv .dateHead .dateBtnDiv li b {
+    color: #f60;
+}

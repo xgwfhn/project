@@ -1,0 +1,724 @@
+body {
+    font-family: Helvetica Neue,Helvetica,sans-serif;
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8;
+    background: #f5f5f5;
+}
+
+.html {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.my-navbar {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    display: -webkit-box;
+    height: 50px;
+    background: #fff;
+    z-index: 100;
+    border-bottom: #f2f2f2 1px solid;
+}
+
+。my-navbar .item {
+    -webkit-box-flex: 1;
+    text-align: center;
+}
+
+.my-navbar .item.on .bd {
+    color: #00B290;
+    border-bottom: #00B290 2px solid;
+}
+
+.my-navbar .item {
+    -webkit-box-flex: 1;
+    text-align: center;
+}
+
+.my-navbar .item .bd {
+    display: inline-block;
+    height: 49px;
+    line-height: 49px;
+    padding: 0 10px;
+}
+
+.nav_bot {
+    height: 50px;
+    overflow: hidden;
+}
+
+.rentDetailBox {
+    overflow: hidden;
+}
+
+.rentDetailBox> .imgDiv {
+    width: 100%;
+    overflow: hidden;
+}
+
+.btn-xfxq-hxt {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.btn-xfxq-hxt .priceDiv {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,178,144,0.7);
+    border-radius: 0 15px 15px 0;
+    z-index: 10;
+}
+
+.btn-xfxq-hxt .priceDiv span {
+    margin: 5px 15px;
+}
+
+.btn-xfxq-hxt .priceDiv span::before {
+    content: "¥";
+}
+
+.btn-xfxq-hxt .index_txt {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+    z-index: 10;
+}
+
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.swipe-wrap > div {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.swipe-wrap > div >a {
+    display: block;
+}
+
+a {
+    color: #333;
+}
+
+.rentDetailBox> .imgDiv img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rentDetailBox .base {
+    background: #fff;
+    padding: 10px 15px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: #ddd 1px solid;
+}
+
+.rentDetailBox .base h2 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.rentDetailBox .base h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #888;
+}
+
+.rentDetailBox .base .keywords {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.rentDetailBox .base .keywords i {
+    font-style: normal;
+    font-size: 12px;
+    border: #00B290 1px solid;
+    border-radius: 3px;
+    color: #00B290;
+    margin-right: 5px;
+    padding: 2px 5px;
+}
+
+.rentDetailBox .base .comment {
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #999;
+}
+
+.rentDetailBox .base .comment i {
+    color: #00B290;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.rentDetailBox .base .fav.fav_no {
+    background: url(../../assets/images/fav_no.png) no-repeat;
+    background-size: auto 20px;
+}
+
+.hxbedkey {
+    display: flex;
+   /*  padding: 20px 0; */
+   padding-bottom: 1%;
+    padding-top: 5%;
+}
+
+.hxbedkey .item {
+    flex: 1;
+    text-align: center;
+}
+
+.hxbedkey .item img {
+    width: 30px;
+    height: 30px;
+}
+
+.hxbedkey .item .title {
+    font-weight: 700;
+}
+
+.hxbedkey .item .desc {
+    color: #888;
+    font-size: 14px;
+}
+
+.hxbedkey .item .desc.hxdesc .line span:nth-child(even)::before {
+    content: "，";
+}
+
+.weui-cells_after-title {
+    margin-top: 0;
+}
+
+.weui-cells {
+    margin-top: 1.17647059em;
+    background-color: #fff;
+    line-height: 1.47058824;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+}
+
+.weui-cells:after, .weui-cells:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    color: #e5e5e5;
+    z-index: 2;
+}
+
+.weui-cell_access {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: inherit;
+}
+
+.weui-cell {
+    padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* border-bottom: #ddd 1px solid; */
+}
+
+* {
+    outline: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a img {
+    border: 0;
+}
+
+.weui-cell__bd {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.weui-cell_access .weui-cell__ft {
+    padding-right: 13px;
+    position: relative;
+}
+.weui-cell__ft {
+    text-align: right;
+    color: #999;
+}
+
+.weui-cell_access .weui-cell__ft:after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8cd;
+    border-style: solid;
+    -webkit-transform: matrix(.71,.71,-.71,.71,0,0);
+    transform: matrix(.71,.71,-.71,.71,0,0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 2px;
+}
+
+.blank10 {
+    clear: both;
+    font-size: 0;
+    height: 10px;
+    overflow: hidden;
+}
+
+.reminder {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.reminder .title {
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.reminder .con {
+    overflow: hidden;
+    padding: 10px 15px;
+    background: #fff;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+}
+
+.blank20 {
+    clear: both;
+    font-size: 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.downView.first {
+    border-top: #f2f2f2 1px solid;
+}
+
+.downView .title {
+    background: #fff;
+    padding: 10px 15px;
+    display: flex;
+}
+
+.downView .title .bd {
+    vertical-align: middle;
+    flex: 1;
+}
+
+.downView .title img {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+}
+
+.downViewCon {
+    overflow: hidden;
+    padding: 10px 15px;
+    margin-top: 2px;
+    display: none;
+}
+
+.downView {
+    overflow: hidden;
+    border-bottom: #f2f2f2 1px solid;
+}
+
+.downView .title {
+    background: #fff;
+    padding: 10px 15px;
+    display: flex;
+}
+
+.ptCon {
+    overflow: hidden;
+    padding: 0 15px;
+    margin-top: 2px;
+    display: none;
+}
+
+.ptCon .item {
+    overflow: hidden;
+    border-bottom: #efefef 1px solid;
+    padding: 10px 0;
+}
+
+.ptCon .item .subTitle {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.ptCon dd {
+    width: 25%;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    margin: 8px 0;
+}
+
+.ptCon dd i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.ptCon dd i.dianshi {
+    background: url(../../assets/images/peitao/dianshixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.bingxiang {
+    background: url(../../assets/images/peitao/bingxiangxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+
+.ptCon dd i.kongtiao {
+    background: url(../../assets/images/peitao/kongtiaoxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.wifi {
+    background: url(../../assets/images/peitao/wuxianwnagxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.dianreshuihu {
+    background: url(../../assets/images/peitao/dianreshuihuxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.chuifengji {
+    background: url(../../assets/images/peitao/dianchuifengxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.xiyiye {
+    background: url(../../assets/images/peitao/xiyiyexhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.liangyijia {
+    background: url(../../assets/images/peitao/liangyijiaxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.tuoxie {
+    background: url(../../assets/images/peitao/tuoxiexhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.shafa {
+    background: url(../../assets/images/peitao/shafaxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.dianti {
+    background: url(../../assets/images/peitao/dianti.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.miehuoqi {
+    background: url(../../assets/images/peitao/miehuoqi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.zhenxianbao {
+    background: url(../../assets/images/peitao/zhenxianbao.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.xiyiji {
+    background: url(../../assets/images/peitao/xiyijixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.quantianreshui {
+    background: url(../../assets/images/peitao/24xiaoshireshuixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.duliweiyu {
+    background: url(../../assets/images/peitao/duliweiyuxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.maojin {
+    background: url(../../assets/images/peitao/maojingxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.yujin {
+    background: url(../../assets/images/peitao/yujingxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.yaju {
+    background: url(../../assets/images/peitao/yajuxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.xifashui {
+    background: url(../../assets/images/peitao/xifashuixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.weishengzhi {
+    background: url(../../assets/images/peitao/weishengzhixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.weishengzhi {
+    background: url(../../assets/images/peitao/weishengzhixhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.diancilu {
+    background: url(../../assets/images/peitao/dianciluxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.tangguo {
+    background: url(../../assets/images/peitao/tangguoxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.daoju {
+    background: url(../../assets/images/peitao/daojuxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.dianfanbao {
+    background: url(../../assets/images/peitao/dianfanbaoxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.mianfeitingche {
+    background: url(../../assets/images/peitao/mianfeitingche.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.jiaochefuwu {
+    background: url(../../assets/images/peitao/jiaochefuwu.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.zuchefuwu {
+    background: url(../../assets/images/peitao/zuchefuwu.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.yiliaojiuyuan {
+    background: url(../../assets/images/peitao/yiliaojiuyuan.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.youyongchi {
+    background: url(../../assets/images/peitao/youyongchi.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.xinglijicun {
+    background: url(../../assets/images/peitao/xinglijicun.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.jiaoxingfuwu {
+    background: url(../../assets/images/peitao/jiaoxingfuwu.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.jiedaiwaibin {
+    background: url(../../assets/images/peitao/jiedaiwaibin.png) center;
+    background-size: 30px 30px;
+}
+
+.ptCon dd i.canju {
+    background: url(../../assets/images/peitao/canjuxhdpi.png) center;
+    background-size: 30px 30px;
+}
+
+
+.ptCon dd p {
+    font-size: 14px;
+    margin-top: -3%;
+}
+
+.otherHxDiv {
+    overflow: hidden;
+    background: #fff;
+    border-top: #f2f2f2 1px solid;
+    border-bottom: #f2f2f2 1px solid;
+}
+
+.otherHxDiv > .title {
+    padding: 10px 15px;
+}
+
+.otherHxDiv .other_item {
+    float: left;
+    margin-left: 15px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
+a img {
+    border: 0;
+}
+
+.otherHxDiv .text {
+    padding: 5px 10px;
+    background-color: #fff;
+}
+
+.otherHxDiv .text .t-con {
+    display: flex;
+}
+
+.otherHxDiv .text .detail {
+    flex: 1;
+}
+
+.otherHxDiv .text .detail .title {
+    font-size: 17px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.otherHxDiv .text .detail .desc {
+    font-size: 14px;
+    color: #888;
+    line-height: 20px;
+}
+
+.otherHxDiv .text .detail .desc span {
+    color: #f60;
+}
+
+.otherHxDiv .text .priceDiv {
+    overflow: hidden;
+}
+
+
+.otherHxDiv .text .priceDiv .price {
+    color: #f60;
+}
+
+.otherHxDiv .text .priceDiv .price i {
+    font-size: 12px;
+    font-style: normal;
+}
+
+.otherHxDiv .text .priceDiv .price span {
+    font-size: 17px;
+}
+
+.otherHxDiv .text .keywords span {
+    font-size: 12px;
+    border: #00B290 1px solid;
+    border-radius: 3px;
+    color: #00B290;
+    margin-right: 5px;
+    padding: 2px 5px;
+}
+
+.foot_reserve_blank {
+    height: 60px;
+    overflow: hidden;
+}
+
+.foot_reserve_div {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    display: -webkit-box;
+    border-top: #f2f2f2 1px solid;
+}
+
+.foot_reserve_div .detail {
+    -webkit-box-flex: 1;
+    line-height: 50px;
+    padding-left: 15px;
+}
+
+.foot_reserve_div .detail .bd {
+    display: inline-block;
+}
+
+.foot_reserve_div .detail .bd .price_label {
+    font-size: 17px;
+}
+
+.foot_reserve_div .detail .bd .price {
+    color: #f00;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.foot_reserve_div .detail .bd .price::before {
+    content: "¥";
+    font-size: 14px;
+}
+
+.foot_reserve_div .btns {
+    margin-right: 15px;
+    padding-top: 8px;
+}
+
+.foot_reserve_div .btns .foot_btn {
+    display: block;
+    padding: 5px 20px;
+    background: #f00;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    line-height: 25px;
+}
+
