@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商品分类</title>
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<!-- No Baidu Siteapp-->
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="icon" type="image/png" href="../../../assets/i/favicon.png">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+<link rel="apple-touch-icon-precomposed"
+	href="../../../assets/i/app-icon72x72@2x.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage"
+	content="../../../assets/i/app-icon72x72@2x.png">
+<meta name="msapplication-TileColor" content="#0e90d2">
+
+<link rel="stylesheet" href="../../../assets/css/amazeui.min.css">
+<link rel="stylesheet" href="../../../assets/css/app.css">
+<link rel="stylesheet" href="../../../assets/css/category.css">
+ 
+</head>
+<body >
+	<!-- <header data-am-widget="header" class="am-header am-header-default">
+		<div class="am-header-left am-header-nav">
+			<a href="#left-link" class=""> <img class="am-header-icon-custom"
+				src="data:image/svg+xml;charset&#x3D;utf-8,&lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 12 20&quot;&gt;&lt;path d&#x3D;&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill&#x3D;&quot;%23fff&quot;/&gt;&lt;/svg&gt;"
+				alt="" />
+			</a>
+		</div>
+
+		<h1 class="am-header-title">
+			<img src="http://s.amazeui.org/media/i/brand/amazeui-cw.png" />
+		</h1>
+
+		<div class="am-header-right am-header-nav">
+			<a href="#right-link" class=""> <img
+				class="am-header-icon-custom"
+				src="data:image/svg+xml;charset&#x3D;utf-8,&lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; viewBox&#x3D;&quot;0 0 42 26&quot; fill&#x3D;&quot;%23fff&quot;&gt;&lt;rect width&#x3D;&quot;4&quot; height&#x3D;&quot;4&quot;/&gt;&lt;rect x&#x3D;&quot;8&quot; y&#x3D;&quot;1&quot; width&#x3D;&quot;34&quot; height&#x3D;&quot;2&quot;/&gt;&lt;rect y&#x3D;&quot;11&quot; width&#x3D;&quot;4&quot; height&#x3D;&quot;4&quot;/&gt;&lt;rect x&#x3D;&quot;8&quot; y&#x3D;&quot;12&quot; width&#x3D;&quot;34&quot; height&#x3D;&quot;2&quot;/&gt;&lt;rect y&#x3D;&quot;22&quot; width&#x3D;&quot;4&quot; height&#x3D;&quot;4&quot;/&gt;&lt;rect x&#x3D;&quot;8&quot; y&#x3D;&quot;23&quot; width&#x3D;&quot;34&quot; height&#x3D;&quot;2&quot;/&gt;&lt;/svg&gt;"
+				alt="" />
+			</a>
+		</div>
+	</header> -->
+<div>
+	<div class="sn-nav sn-block">
+		<div class="sn-nav-back">
+			<span class="am-icon-chevron-left"></span><a class="sn-iconbtn" href="javascript:history.go(-1);">返回</a>
+		</div>
+		<div class="sn-nav-title of">苏宁超市</div>
+		<div class="sn-nav-right tr pr">
+			<img onclick="$('#sub-title').toggle();$('#screenIfmNav').toggle();"
+				src="data:image/png;charset=utf-8;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUxpcTQ8RDQ8RDQ8RDQ8RDQ8RDQ8RDQ8RAEPSCIAAAAHdFJOUwD2cEy/EYW+tvqEAAAAb0lEQVRIDe2ROw7AMAhDwy/c/8ZVOgCVKuhayUyRsSF5WQsFAiAAAl8JiBKpPN29tv2uXTO9Jk5sxuRlz6Cp85nPrrlm0MjteM0pI4M2tGNO8Q2XiEjxDU+NSPX1QCOyqq//tsy8+bKLEwiAwK8IXL+VA7VJ24A2AAAAAElFTkSuQmCC"
+				style="width: 1rem">
+			<ul class="nav-more-list" id="sub-title">
+				<li><a class="nav-more-icon home-icon" href="//m.suning.com">首页</a>
+				</li>
+				<li><a class="nav-more-icon cart-icon"
+					href="//shopping.suning.com/project/cart/cart1.html">购物车</a></li>
+				<li><a class="nav-more-icon search-icon"
+					href="//m.suning.com/search.html">搜索</a></li>
+				<li><a class="nav-more-icon cate-icon"
+					href="//m.suning.com/list/list.html">全部分类</a></li>
+				<li><a class="nav-more-icon ebuy-icon"
+					href="//my.suning.com/wap/home.do">我的易购</a></li>
+			</ul>
+		</div>
+		<div id="screenIfmNv" class="screenIn"
+			onclick="$('#sub-title').toggle();$(this).hide();" style="opacty: 0">
+		</div>
+	</div>
+	<div class="search"><span class="am-icon-search"></span><input type="text" value="搜索商品"/></div>
+     <div class="left" >
+        <span>处方药(RX)</span>
+	    <span>非处方药(OTC)</span>
+	    <span>中药饮片(材)</span>
+	    <span>保健食品</span>
+	    <span>个人护肤品</span>
+	    <span>器械</span>
+	    <span>健康用品</span>
+	    <span>生活便利品</span>
+	    <span>季节性商品</span>
+	    <!-- <span>护肤彩妆</span>
+	    <span>个人护理</span>
+	    <span>母婴</span>
+	    <span>运动户外</span>
+	    <span>手机数码</span>
+	    <span>家用电器</span>
+	    <span>家具家纺</span>
+	    <span>家居家装</span>
+	    <span>生活超市</span>
+	    <span>图书</span> -->
+     </div>
+     <div class="right">
+     	<ul id="myui">
+     	</ul>
+     </div>
+</div>
+	<!--在这里编写你的代码-->
+
+	<!--[if (gte IE 9)|!(IE)]><!-->
+	<!--<![endif]-->
+	<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+	<script src="../../../assets/js/jquery.min.js"></script>
+	<script src="../../../assets/js/handlebars.min.js"></script>
+	<script src="../../../assets/js/amazeui.min.js"></script>
+	
+	<script id="ul-template" type="text/x-handlebars-template">
+		{{#each this}}
+		  <li>
+     	  	<div class="product">
+                            	<a name="yys_sy_hyzq011" class="product-img" >
+                                	<img class="hyjpros11" alt="" src="{{imgsrc}}">
+                            	</a>
+                            	<p class="product-name"><a name="yys_sy_hyzq011" >
+                            		{{name}}</a>
+                            	</p>
+             </div>
+     	  </li>
+		{{/each}}
+     </script>
+	<script type="text/javascript" >
+		
+	$(function(){
+		//$('body').on('touchmove',function(event){event.preventDefault();});
+		var data1 = [
+    	   {
+    		   "imgsrc":"//imgservice4.suning.cn/uimg1/b2c/image/J3Mj8dDTPhWlPilZP0T5uQ==.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice5.suning.cn/uimg1/b2c/image/GzYCNmIZU10M_gy9qUlS8g.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice5.suning.cn/uimg1/b2c/image/YKBf9Rb3APB5n5VuYRjVlQ==.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice2.suning.cn/uimg1/b2c/image/ut2rO1fVXdAJulgmFD4DIQ==.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   }
+       ];
+		var span = $('.left>span');
+       $('.left>span').each(function(){
+    	   $(this).click(function(){
+    		   $(this).css("background-color","#FFFFFF");
+    		   $(this).css("border-left-style","solid");
+    		   $(this).css("border-left-width","2px");
+    		   $(this).css("border-left-color","#387EF5");
+    		   $(this).css("color","#387EF5");
+    		   
+    		   var n = span.index($(this));
+    	        $('.left span:not(:eq('+n+'))').each(function(){
+    	        	 $(this).css("background-color","#F8F8FA");
+    	        	 $(this).css("border-left-style","none");
+    	    		 $(this).css("border-left-width","0px");
+    	    		 $(this).css("color","#000000");
+    	        });
+    	        
+    	        var myTemplate = Handlebars.compile($("#ul-template").html());
+    	        $('#myui').html(myTemplate(data1));//显示菜单切换的内容
+    	   })
+    	   
+       });
+       
+       var data = [
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice5.suning.cn/uimg1/b2c/image/YKBf9Rb3APB5n5VuYRjVlQ==.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice2.suning.cn/uimg1/b2c/image/ut2rO1fVXdAJulgmFD4DIQ==.jpg_400w_400h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   },
+    	   {
+    		   "imgsrc":"//imgservice.suning.cn/uimg1/b2c/image/LXmDuO9cvbPTFuo9j_fBhA==.jpg_200w_200h_4e",
+    		   "name":"手机"
+    	   }
+       ];
+     //注册一个Handlebars模版，通过id找到某一个模版，获取模版的html框架
+       var myTemplate = Handlebars.compile($("#ul-template").html());
+     //将json对象用刚刚注册的Handlebars模版封装，得到最终的html，插入到基础table中。
+       $('#myui').html(myTemplate(data));
+     
+       $(".search>input").focus(function(){
+    	   self.location='/wechat/category/search';   
+ 	   }); 
+       $("#myui>li").click(function(){
+    	   self.location='/wechat/category/searchResult';   
+ 	   }); 
+    });
+		
+	</script>
+</body>
+</html>

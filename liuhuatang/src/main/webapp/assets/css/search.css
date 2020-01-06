@@ -1,0 +1,348 @@
+   .search{
+     margin: 8px;
+     background-color: #F2F2F2;
+     border-radius: 12px;
+     float: left;
+     width: 82%;
+   }
+   
+  .search span{
+    margin-right: 13px;
+    padding-left: 6px;
+  } 
+  
+  .searchText{
+  	font-size: 12px;
+    margin-top: 11px;
+    position: absolute;
+    margin-left: 3px;
+  }
+  
+  .search input{
+    width: 80%;
+    background-color: #F2F2F2;
+    border: 0px;
+    font-size:12px;
+    padding-bottom: 5px;
+    color:#b3a9a9;
+  }
+  
+  .line_02{
+    height: 1px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    margin-top: 15px;
+ }
+ 
+ 	ul{
+	 list-style: none;  /* 设计每个li的区域大小 */
+	 padding-left: 6px;
+     padding-right: 4px;
+	}
+	
+	li{
+		float: left;
+	    margin: 5px;
+	    background-color: #F2F2F2;
+	    width: 30%;
+	    text-align: center;
+	    font-size:12px;
+	     border-radius: 6px;
+	     height:26px;
+	     padding-top:4px;
+	}
+	.hotsearch{
+	  margin-top: -10px;
+	}
+	
+	.searchtype{
+	  margin-top: -6%;
+	}
+	.searchtype li{
+	  width:21%;
+	  background-color: #FFFFFF;
+	}
+	
+	.productList{
+	  /* margin-top:10px; */
+	    padding-bottom: .4rem;
+	    width: 100%;
+	    margin: 0 auto;
+	    overflow: hidden; /* 适应不同规格的手机屏幕 */
+	    /* display: block; */
+	}
+	
+	.productList ul {
+	    overflow: hidden;
+	    background-color: #fff;
+	}
+	
+	.productList ul li {
+	    float: left;
+	    padding: 1px;
+	    width: 100%;
+	    height: 130.88px;
+	    background: #FFF;
+	    overflow: hidden;
+	    margin-bottom: 1px;
+	    position: relative;
+	}
+
+	
+	
+	.productList ul li .img
+	{
+		position: relative;
+	    float: left;
+	    width: 88.33px;
+        height: 85.33px;
+	    margin: 0 .4rem 0 0;
+	    
+	}
+	
+	.productList ul li .img .img-occupied
+	{
+		width: 85.33px;
+        height: 85.33px;
+    	/* background: url(images/ljz.png) center center no-repeat;
+    	background-size: 90%; */
+	}
+	
+	.productList ul li .img .img-occupied img
+	{
+		
+		width: 85.33px;
+        height: 85.33px;
+	}
+	
+	.productList ul li .img .position-right-bottom
+	{
+		position: absolute;
+	    left: 0;
+	    bottom: -22px;
+	    height: 29px;
+	   /*  background-color: aquamarine; */
+	    width: 85.3px;
+	}
+	
+	.productList ul li .txt
+	{
+		height: 128.88px;
+       /*  background-color: yellow; */
+        overflow: hidden;
+    	border-bottom: 1px solid #ddd;
+    	width: auto;
+    	position: relative;
+    	padding-top:3px;
+	}
+	
+	.productList ul li .txt .name {
+	    /*   display: -webkit-box;
+	    overflow: hidden;
+	    height: 1.4rem;
+	    margin: -.04rem 0 .22rem;
+	    color: #333;
+	    text-overflow: ellipsis;
+	    font-size: .52rem;
+	    line-height: .72rem;
+	    -webkit-line-clamp: 2;
+	    -webkit-box-orient: vertical;
+	    word-break: break-all;  
+	        width:25rem; */
+	        
+	        display: -webkit-box; /* 超出范围后用..显示 */
+            overflow: hidden;
+	        line-height: 16px;
+		    font-size: 13px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    text-align: left;
+		    color: #0c0b0b;
+		    -webkit-line-clamp: 2;
+	        -webkit-box-orient: vertical;
+	        word-break: break-all;  
+	}
+	
+	.productList ul li .txt .name i.project-label {
+	    display: inline-block;
+	    margin: 1px .1rem 0 0;
+	    padding: 2px 4px 2px .4px;
+	    font-size: 12px;
+	    line-height: 9px;
+	    border: 1px solid #f60;
+	    color: #f60;
+	    position: relative;
+	    top: 1px;
+	    border-radius: 2px;
+	     font-style: normal;
+	}
+	
+	.productList ul li.high-product .info-label {
+	    /*  display: block;
+	    overflow: hidden;
+	    width: 100%;
+	    height: .6rem;
+	    margin: -.148rem 0 .4rem;  */
+	    display: block;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 16px;
+	    /* margin: 4px 0px; */
+	    margin-top: -16px;
+	    text-align: left;
+	}
+	
+	.productList ul li.high-product .info-label .i-text {
+	     /* float: left;
+	    height: .56rem;
+	    margin: .02rem 0 .02rem 0;
+	    padding: 0 .06rem 0 .12rem;
+	    color: #999;
+	    font-size: .48rem;
+	    line-height: .58rem;  */
+	    
+	    float: left;
+	    /* height: 14px; */
+	    margin: 1px 0 1px 0;
+	    /* padding: 0 .06rem 0 .12rem; */
+	    color: #999;
+	    font-size: 12px;
+	    line-height: 16px;
+	    font-style: normal;
+	    font-weight: 500;
+	}
+	
+	.productList ul li.high-product .info-label .i-text:before {
+	    content: '|';
+	    display: inline-block;
+	    /* margin-right: .12rem; */
+	   /*  height: .56rem; */
+	    font-size: 12px;
+	    /* line-height: .58rem; */
+	     padding-left: 4px; 
+         padding-right: 4px; 
+	}
+	
+	.productList ul li .txt .price {
+	     /*position: relative;
+	    height: 3rem;
+	     padding-bottom: .4rem;
+	    padding-top: .08rem; */
+	    overflow: hidden;
+	    margin-top: -11px;
+	}
+	
+	.productList ul li .txt .price .price-box {
+	  /*   height: .84rem;
+	    overflow: hidden; */
+	}
+	.productList ul li .txt .price .price-txt {
+	   /*  font-size: .48rem;
+	    line-height: .84rem; */
+	    color: #f40;
+	  /*   overflow: hidden;
+	    height: .84rem;
+	    display: block; */
+	   /*  padding-left:1px; */
+	}
+
+	.productList ul li .txt .price .price-txt .price-num {
+	    /* vertical-align: baseline; */
+	    float: left;
+	     font-style: normal;
+	   /*  margin-right: 8px; */
+	}
+
+	.productList ul li .txt .price .price-txt strong {
+	    font-size: 15px;
+	    font-weight: normal;
+	    padding-left:2px;
+	   
+	}
+	
+	/* .productList ul li .txt .product-label i {
+	    height: 12px;
+	    line-height: 14px;
+	    font-size: 9px;
+	} */
+	
+	.productList ul li .txt .product-label i {
+	    float: left;
+	    display: inline-block;
+	   /*  margin: 0 .08rem 0 0; */
+	    padding-left: 2px;
+	    padding-right: 2px;
+	     
+	    height: 14px;
+	    line-height: 14px;
+	    color: #FFF;
+	    font-size: 12px;
+	    overflow: hidden;
+	    border-radius: 3px;
+	    font-style: normal;
+	}
+	
+	i.promotion-color-one {
+    	background: #f60!important;
+	}
+
+	.productList ul li .txt .price .shop-num {
+/* 	    display: block;
+ */	    height: 14px;
+	    line-height:14px;
+	   /*  margin: .34rem 0 0 0; */
+	    overflow: hidden;
+	    float: left;
+	   	margin-left: -58px;
+	   	font-size:14px;
+	   	/* margin-top: 17px; */
+	}
+
+    .productList ul li .txt .price .shop-num em {
+	    color: #999;
+	    margin: 0 .48rem 0 0;
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	
+	.productList ul li .txt .price p{
+	   /* margin-top:-16px; */
+	  /*  margin-top:1px; */ 
+	}
+	
+	.productList ul li .txt .price p:nth-child(2){
+	    margin-top:26px; 
+	    margin-bottom: 30px;
+	    width:80px;
+	}
+	/* .productImg{
+	  float:left;
+	  width:30%;
+	  height: 101px;
+	}
+	
+	.productImg img{
+	  width:100%;
+	  height:100%;
+	}
+	
+	.productText{
+	 width:80%;
+	}
+	
+	.productName{
+	  font-size:12px;
+	}
+	.price{
+	  font-size:12px;
+	  color:#F60;
+	}
+	
+	.evaluate{
+	  font-size:12px;
+	}
+	.productText >div >div{
+	     width:100%;
+	   background-color: #d4cccc;
+	} */
+ 
